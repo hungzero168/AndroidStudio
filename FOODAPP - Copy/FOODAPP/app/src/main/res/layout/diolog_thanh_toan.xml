@@ -1,0 +1,101 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="20dp">
+
+    <!-- Horizontal layout for "Chi tiết hóa đơn" and "Total Amount" -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chi tiết hóa đơn: "
+            android:textColor="@color/black"
+            android:layout_gravity="start"
+            android:textStyle="bold"
+            android:textSize="26sp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tongtien"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$0.00"
+            android:layout_marginRight="20dp"
+            android:textColor="#FF0000"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_gravity="end" />
+    </LinearLayout>
+
+    <!-- ScrollView for other information -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txttenmon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Food item 1, Food item 2, Food item 3" />
+
+
+            <!-- TextView and EditText for Name -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Họ và tên:*" />
+
+            <EditText
+                android:id="@+id/edtten"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!-- TextView and EditText for Address -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Địa chỉ:*" />
+
+            <EditText
+                android:id="@+id/edtdiachi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!-- TextView and EditText for Phone -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"
+                android:text="Số điện thoại:*" />
+
+            <EditText
+                android:id="@+id/edtsdt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!-- Add a button to confirm the information -->
+            <Button
+                android:id="@+id/btnxacnhan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="xác nhận" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
